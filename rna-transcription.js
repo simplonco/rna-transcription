@@ -14,7 +14,7 @@ DnaTranscriber.prototype.toRna = function(dna) {
     if (dna[i] == "T") {
       dna[i] = "A";
     } else if (dna[i] == "A") {
-      dna[i] = "T";
+      dna[i] = "U";
     } else if (dna[i] == "G") {
       dna[i] = "C";
     } else { // dna[i] == "C"
