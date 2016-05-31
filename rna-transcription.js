@@ -9,6 +9,7 @@
 var DnaTranscriber = function(){};
 
 DnaTranscriber.prototype.toRna = function(dna) {
+  dna = dna.split("");
   for (var i = 0; i < dna.length; i++) {
     if (dna[i] == "T") {
       dna[i] = "A";
@@ -20,7 +21,7 @@ DnaTranscriber.prototype.toRna = function(dna) {
       dna[i] = "G";
     }
   }
-  return dna;
+  return dna.join("");
 };
 
 module.exports = DnaTranscriber;
