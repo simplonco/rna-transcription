@@ -8,10 +8,19 @@
 
 var DnaTranscriber = function(){};
 
-DnaTranscriber.prototype.toRna = function(dna) {
-//
-// YOUR CODE GOES HERE
-//
+DnaTranscriber.prototype.toRna = function(dnaStr = '') {
+    return dnaStr.replace(/[GCTA]/g, (match)=>{
+        switch(match){
+          case 'G':
+            return 'C';
+          case 'C':
+              return 'G';
+          case 'T':
+              return 'A';
+          case 'A':
+              return 'U';
+        }
+      })
 }
 
 module.exports = DnaTranscriber;
